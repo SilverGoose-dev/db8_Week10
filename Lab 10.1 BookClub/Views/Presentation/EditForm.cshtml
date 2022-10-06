@@ -1,0 +1,19 @@
+﻿@model Presentation
+
+@{
+    ViewData["Title"] = "EditForm";
+}
+
+<h1>Edit Presentation</h1>
+
+<form method="post" action="/presentation/savechanges">
+    <input type="hidden" name="id" value="@Model.ID" />
+    <input type="hidden" name="personid" value="@Model.personid" />
+    ID: @Model.personid<br />
+    Presentation Date: <input type="date" name="presentationdate" value="@Model.presentationdate" /><br />
+    Book Title: <input type="text" name="booktitle" value="@Model.booktitle"/><br />
+    Book Author:  <input type="text" name="bookauthor" value="@Model.bookauthor"/><br />
+    Genre <input type="text" name="genre" value="@Model.genre"/><br />
+    <input type="submit" value="Save" />
+</form>
+
